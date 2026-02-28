@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    
+}
+
+body{
+    padding: 0 70px;
+}
+
+section { 
+    scroll-margin-top: 116px; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
