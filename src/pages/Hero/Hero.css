@@ -62,6 +62,7 @@
                     border-radius: 6px;
                     background-color: #FFFFFF99;
                     color: black;
+                    margin-bottom: 40px;
                 }
             }
             .hero-pic{
@@ -70,7 +71,8 @@
                 align-items: center;
                 max-width: 437px;
                 width: 100%;
-                height: 444px;
+                min-height: 444px;
+                margin-top: 40px;
 
                 .purple-circle{
                     max-width: 413px;
@@ -84,7 +86,7 @@
                 .cubes{
                         max-width: 437px;
                         width: 100%;
-                        height: 444px;                        
+                        min-height: 444px;                        
                         position: absolute;
                         background-image: url(./../../assets/images/squers\ \ -\ option\ 1.svg);
                         background-repeat: no-repeat;
@@ -95,7 +97,7 @@
                     width: 100%;
                     height: 444px;
                     position: absolute;
-                    top: 157px;
+                    top: 190px;
                     background-image: url(./../../assets/images/my-picture_wipe_bg.webp);
                     background-repeat: no-repeat;
                     background-position: center;
@@ -134,9 +136,13 @@
                     margin: 0 auto 30px auto;
                 }
             }
+
             .hero-pic{
+                margin-top: 100px;
+                
                 .my-pic{
                     top: 510px;
+                    margin-top: 100px;
                 }
             }
         }
