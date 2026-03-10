@@ -4,6 +4,7 @@ import Hero from './pages/Hero/Hero'
 import AboutMe from './pages/AboutMe/AboutMe'
 import Education from './pages/Education/Education'
 import TryMe from './pages/TryMe/TryMe'
+import WorkSpace from './pages/WorkSpace/WorkSpace'
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
         <AboutMe />
         <Education />
         < TryMe/>
+        <WorkSpace />
         </>
     )
     }

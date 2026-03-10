@@ -1,4 +1,5 @@
 import './Hero.css';
+import cv from "./../../assets/RoaaZomanCV.pdf"
 
 const Hero = () => {
     return (
@@ -14,7 +15,9 @@ const Hero = () => {
                     <p className='description'>Agency-quality webflow websites with the personal touch of a freelancer.
                     </p>
 
-                    <button className='cv-btn'>Download CV</button>
+                    <a href={cv} download className='cv-btn'>
+                        Download CV
+                    </a>
                 </div>
 
                 <div className="hero-pic">

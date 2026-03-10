@@ -56,6 +56,10 @@
                     color: #43495B;
                 }
                 .cv-btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
                     width: 155px;
                     height: 50px;
                     background: none;
@@ -64,6 +68,11 @@
                     background-color: #FFFFFF99;
                     color: black;
                     margin-bottom: 40px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background-color: #ffffffcf;
+                    }
                 }
             }
             .hero-pic{
