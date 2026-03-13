@@ -1,99 +1,130 @@
+/* ===== SECTION ===== */
 
 .education{
-    .edu-title{
-        text-align: center;
-
-        .edu-p{
-            font-weight: 500;
-            font-style: Medium;
-            font-size: 20px;
-            line-height: 150%;
-            color: #0C96E2;
-        }
-        .edu-text{
-            font-weight: 600;
-            font-style: SemiBold;
-            font-size: 40px;
-            line-height: 120%;
-            margin-bottom: 88px;
-        }
-    }
-
-    .ex-container{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 107px;
-        
-        
-
-        .ex{
-            max-width: 500px;
-            width: 100%;
-            min-height: 284px;
-            padding: 0 10px 0;
-            display: flex;
-
-            .dashed-line{
-                position: relative;
-                width: 1px;
-                height: 284px;
-                border: 1.5px dashed black;
-                margin-right: 35px;
-                z-index: -1;
-            }
-
-            .ex-content{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-
-                .wrapping{
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    gap: 10px;
-
-                    .darkCircle{
-                        margin-left: -50px;
-                        width: 30px;
-                        height: 30px;
-                        color: #0C96E2;
-                    }
-                    .ex-title{
-                    font-weight: 500;
-                    font-style: Medium;
-                    font-size: 25px;
-                    letter-spacing: -1.5%;
-                    color: #344054;
-                    margin-bottom: 14px;
-                    margin-left: 5px;
-                    }
-                }
-                .ex-p{
-                    font-weight: 400;
-                    font-size: 16px;
-                    letter-spacing: -1.5%;
-                    color: #98A2B3;
-                }
-
-                
-            }
-
-
-
-            
-
-                
-            
-        }
-    }
+margin-top:120px;
 }
 
-@media screen and (max-width: 992px){
-    .ex-container{
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-    }
+/* ===== TITLE ===== */
+
+.education .edu-title{
+text-align:center;
+}
+
+.education .edu-title .edu-p{
+font-weight:500;
+font-size:20px;
+line-height:150%;
+color:#0C96E2;
+}
+
+.education .edu-title .edu-text{
+font-weight:600;
+font-size:40px;
+line-height:120%;
+margin-bottom:88px;
+color:#1D2130;
+}
+
+/* ===== CONTAINER ===== */
+
+.education .ex-container{
+display:flex;
+justify-content:space-between;
+margin-bottom:107px;
+}
+
+/* ===== CARD ===== */
+
+.education .ex{
+max-width:500px;
+width:100%;
+min-height:284px;
+padding:0 10px;
+display:flex;
+}
+
+/* ===== DASHED LINE ===== */
+
+.education .dashed-line{
+position:relative;
+width:1px;
+height:284px;
+border:1.5px dashed black;
+margin-right:35px;
+z-index:-1;
+}
+
+/* ===== CONTENT ===== */
+
+.education .ex-content{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+/* ===== TITLE ROW ===== */
+
+.education .wrapping{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* ===== ICON ===== */
+
+.education .darkCircle{
+margin-left:-50px;
+width:30px;
+height:30px;
+color:#0C96E2;
+}
+
+/* ===== TITLE ===== */
+
+.education .ex-title{
+font-weight:500;
+font-size:25px;
+letter-spacing:-1.5%;
+color:#344054;
+margin-bottom:14px;
+margin-left:5px;
+}
+
+/* ===== DESCRIPTION ===== */
+
+.education .ex-p{
+font-weight:400;
+font-size:16px;
+letter-spacing:-1.5%;
+color:#98A2B3;
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark .education .edu-text{
+color:white;
+}
+
+body.dark .education .ex-title{
+color:white;
+}
+
+body.dark .education .ex-p{
+color:#d0d5dd;
+}
+
+body.dark .education .dashed-line{
+border-color:white;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media screen and (max-width:992px){
+
+.education .ex-container{
+flex-direction:column;
+align-items:center;
+gap:50px;
+}
+
 }

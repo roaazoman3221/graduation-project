@@ -1,239 +1,260 @@
-.about-me {
-    display: flex;
-    justify-content: space-between;
-
-    .logos {
-        max-width: 450px;
-        width: 100%;
-        height: 530px;
-        margin-bottom: 125px;
-
-        .bg {
-            position: relative;
-            max-width: 450px;
-            width: 100%;
-            height: 530px;
-            background-image: url(./../../assets/images/Ellipse\ 2156\ small.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            
-
-            .bg1 {
-                position: absolute;
-                left: 22px;
-                bottom: 23px;
-                max-width: 450px;
-                width: 100%;
-                height: 530px;
-                background-image: url(./../../assets/images/Ellipse\ 2156\ small.png);
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            .bg2 {
-                position: absolute;
-                left: 45px;
-                bottom: 47px;
-                max-width: 450px;
-                width: 100%;
-                height: 530px;
-                background-image: url(./../../assets/images/Ellipse\ 2157\ small.png);
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            .css-logo {
-                position: absolute;
-                top: 37%;
-                left: 45%;
-                width: 65px;
-                height: 82px;
-            }
-
-            .orbit {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .orbit .icon {
-            position: absolute;
-        }
-
-        .icon1 {
-            top: 10%;
-            left: 23%;
-            width: 65px;
-            height: 82px;
-        }
-
-        .icon3 {
-            bottom: 20%;
-            left: 70%;
-            width: 86px;
-            height: 83px;
-        }
-
-        .icon4 {
-            top: 55%;
-            left: 25%;
-            width: 80px;
-            height: 80px;
-        }
-
-        .icon5 {
-            top: 24%;
-            right: 10%;
-            width: 84px;
-            height: 84px;
-        }
-    }
-
-    .main-content {
-        max-width: 500px;
-        width: 100%;
-        margin-bottom: 80px;
-
-        .about-text {
-            .about-me-title {
-                font-weight: 600;
-                font-style: SemiBold;
-                font-size: 40px;
-                letter-spacing: 3%;
-                color: #1D2130;
-                margin-bottom: 12px;
-            }
-            .about-me-des {
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 28px;
-                letter-spacing: 3%;
-                color: #1D2130;
-                margin-bottom: 40px;
-            }
-        }
-
-        .percents {
-            .labels {
-                .percent-content {
-                    display: flex;
-                    align-items: center;
-                    .square-icon {
-                        color: #0C96E2;
-                        width: 33px;
-                        height: 20px;
-                    }
-                }
-                .label {
-                    display: block;
-                    font-weight: 600;
-                    font-style: SemiBold;
-                    font-size: 24px;
-                    letter-spacing: 3%;
-                    color: #1D2130;
-                    margin-bottom: 3px;
-                }
-                input[type="range"] {
-                    -webkit-appearance: none;
-                    appearance: none;
-                    width: 100%;
-                    height: 9px;
-                    border-radius: 5px;
-                    pointer-events: none;
-                }
-                .range.html {
-                    background: linear-gradient(to right, #0C96E2 95%, #EDECEC 95%);
-                }
-                .range.css {
-                    background: linear-gradient(to right, #0C96E2 93%, #EDECEC 93%);
-                }
-                .range.js {
-                    background: linear-gradient(to right, #0C96E2 84%, #EDECEC 84%);
-                }
-                .range.react {
-                    background: linear-gradient(to right, #0C96E2 89%, #EDECEC 89%);
-                }
-
-                input[type="range"]::-webkit-slider-runnable-track {
-                    height: 6px;
-                    border-radius: 5px;
-                }
-
-                input[type="range"]::-webkit-slider-thumb {
-                    -webkit-appearance: none;
-                    width: 18px;
-                    height: 18px;
-                    background-color: #EDECEC;
-                    border: 2px solid #0C96E2;
-                    border-radius: 50%;
-                    margin-top: -6px;
-                    box-shadow: 0px 1px 8px rgba(196, 196, 196, 0.943);
-                }
-
-                .range-wrapper {
-                    position: relative;
-                    width: 100%;
-                }
-
-                .icon-wrapper {
-                    position: absolute;
-                    top: -28px;
-                    transform: translateX(-50%);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    .square-icon {
-                        color: #0C96E2;
-                        width: 55px;
-                        height: 29px;
-                    }
-                }
-
-                .icon-text {
-                    position: absolute;
-                    font-size: 12px;
-                    color: white;
-                    font-weight: 600;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
-    }
+.about-me{
+display:flex;
+justify-content:space-between;
+transition:all 0.3s ease;
 }
 
-@media screen and (max-width: 992px) {
-    .about-me {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
+/* ===== LOGOS ===== */
 
-    .logos {
-        max-width: 300px;
-        width: 100%;
-        height: auto;
-        margin-bottom: 80px;
+.about-me .logos{
+max-width:450px;
+width:100%;
+height:530px;
+margin-bottom:125px;
+}
 
-        /* تقليص الدوائر بنسبة متناسبة */
-        .bg, .bg1, .bg2 {
-            width: 100%;
-            height: auto;
-            transform: scale(0.9); /* يصغر الدوائر 60% */
-            transform-origin: bottom left; 
-        }
-        
+.about-me .logos .bg{
+position:relative;
+max-width:450px;
+width:100%;
+height:530px;
+background-image:url(./../../assets/images/Ellipse\ 2156\ small.png);
+background-repeat:no-repeat;
+background-position:center;
+}
 
-        .bg1 {
-            left: 5%;
-            bottom: 5%;
-        }
+.about-me .logos .bg .bg1{
+position:absolute;
+left:22px;
+bottom:23px;
+max-width:450px;
+width:100%;
+height:530px;
+background-image:url(./../../assets/images/Ellipse\ 2156\ small.png);
+background-position:center;
+background-repeat:no-repeat;
+}
 
-        .bg2 {
-            left: 10%;
-            bottom: 10%;
-        }
-    }
+.about-me .logos .bg .bg2{
+position:absolute;
+left:45px;
+bottom:47px;
+max-width:450px;
+width:100%;
+height:530px;
+background-image:url(./../../assets/images/Ellipse\ 2157\ small.png);
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.about-me .css-logo{
+position:absolute;
+top:37%;
+left:45%;
+width:65px;
+height:82px;
+}
+
+.about-me .orbit{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.about-me .orbit .icon{
+position:absolute;
+}
+
+.about-me .icon1{
+top:10%;
+left:23%;
+width:65px;
+height:82px;
+}
+
+.about-me .icon3{
+bottom:20%;
+left:70%;
+width:86px;
+height:83px;
+}
+
+.about-me .icon4{
+top:55%;
+left:25%;
+width:80px;
+height:80px;
+}
+
+.about-me .icon5{
+top:24%;
+right:10%;
+width:84px;
+height:84px;
+}
+
+/* ===== TEXT ===== */
+
+.about-me .main-content{
+max-width:500px;
+width:100%;
+margin-bottom:80px;
+}
+
+.about-me .about-me-title{
+font-weight:600;
+font-size:40px;
+letter-spacing:3%;
+color:#1D2130;
+margin-bottom:12px;
+}
+
+.about-me .about-me-des{
+font-weight:400;
+font-size:18px;
+line-height:28px;
+letter-spacing:3%;
+color:#1D2130;
+margin-bottom:40px;
+}
+
+/* ===== LABELS ===== */
+
+.about-me .label{
+display:block;
+font-weight:600;
+font-size:24px;
+letter-spacing:3%;
+color:#1D2130;
+margin-bottom:3px;
+}
+
+/* ===== RANGE ===== */
+
+.about-me input[type="range"]{
+-webkit-appearance:none;
+appearance:none;
+width:100%;
+height:9px;
+border-radius:5px;
+pointer-events:none;
+}
+
+.about-me .range.html{
+background:linear-gradient(to right,#0C96E2 95%,#EDECEC 95%);
+}
+
+.about-me .range.css{
+background:linear-gradient(to right,#0C96E2 93%,#EDECEC 93%);
+}
+
+.about-me .range.js{
+background:linear-gradient(to right,#0C96E2 84%,#EDECEC 84%);
+}
+
+.about-me .range.react{
+background:linear-gradient(to right,#0C96E2 89%,#EDECEC 89%);
+}
+
+.about-me input[type="range"]::-webkit-slider-runnable-track{
+height:6px;
+border-radius:5px;
+}
+
+.about-me input[type="range"]::-webkit-slider-thumb{
+-webkit-appearance:none;
+width:18px;
+height:18px;
+background-color:#EDECEC;
+border:2px solid #0C96E2;
+border-radius:50%;
+margin-top:-6px;
+box-shadow:0px 1px 8px rgba(196,196,196,0.943);
+}
+
+/* ===== RANGE ICON ===== */
+
+.about-me .range-wrapper{
+position:relative;
+width:100%;
+}
+
+.about-me .icon-wrapper{
+position:absolute;
+top:-28px;
+transform:translateX(-50%);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.about-me .icon-wrapper .square-icon{
+color:#0C96E2;
+width:55px;
+height:29px;
+}
+
+.about-me .icon-text{
+position:absolute;
+font-size:12px;
+color:white;
+font-weight:600;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark .about-me .about-me-title{
+color:white;
+}
+
+body.dark .about-me .about-me-des{
+color:white;
+}
+
+body.dark .about-me .label{
+color:white;
+}
+
+body.dark .about-me{
+color:white;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media screen and (max-width:992px){
+
+.about-me{
+flex-direction:column-reverse;
+align-items:center;
+}
+
+.about-me .logos{
+max-width:300px;
+width:100%;
+height:auto;
+margin-bottom:80px;
+}
+
+.about-me .bg,
+.about-me .bg1,
+.about-me .bg2{
+width:100%;
+height:auto;
+transform:scale(0.9);
+transform-origin:bottom left;
+}
+
+.about-me .bg1{
+left:5%;
+bottom:5%;
+}
+
+.about-me .bg2{
+left:10%;
+bottom:10%;
+}
+
 }

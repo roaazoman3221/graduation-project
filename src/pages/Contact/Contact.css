@@ -1,0 +1,203 @@
+.contact{
+margin-top:90px;
+margin-bottom:90px;
+}
+
+/* titles */
+
+.contact-title{
+font-weight:500;
+font-size:20px;
+line-height:150%;
+color:#0C96E2;
+}
+
+.contact-description{
+font-weight:600;
+font-size:40px;
+line-height:54px;
+margin-top:8px;
+margin-bottom:56px;
+}
+
+.contact-description span{
+color:#0C96E2;
+}
+
+/* layout */
+
+.contact-container{
+display:flex;
+justify-content:space-between;
+gap:60px;
+}
+
+/* ===== LEFT INFO ===== */
+
+.contact-content{
+display:flex;
+flex-direction:column;
+gap:50px;
+}
+
+.telephone,
+.email,
+.address{
+display:flex;
+gap:20px;
+}
+
+.contact-w-title{
+font-weight:400;
+font-size:16px;
+line-height:14px;
+color:#92929D;
+margin-bottom:16px;
+}
+
+.contact-w-des{
+font-weight:500;
+font-size:16px;
+line-height:18px;
+}
+
+/* icons */
+
+.icon-square{
+background-color:#0C96E2;
+color:white;
+
+border-radius:8px;
+
+width:61px;
+height:56px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:28px;
+}
+
+/* ===== FORM ===== */
+
+.contact-form{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+max-width:600px;
+width:100%;
+
+}
+
+/* inputs */
+
+.contact-input{
+
+width:100%;
+
+padding:16px;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+/* phone full width */
+
+.phone{
+grid-column:span 2;
+}
+
+/* message */
+
+.message{
+grid-column:span 2;
+height:140px;
+resize:none;
+}
+
+/* button */
+
+.send-btn{
+
+grid-column:span 2;
+
+width:180px;
+
+padding:14px;
+
+border:none;
+
+border-radius:8px;
+
+background:#0C96E2;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.send-btn:hover{
+background:#0a7fc0;
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark .contact-w-des{
+color:white;
+}
+
+body.dark .contact-input{
+background:#2a3443;
+border:1px solid #3d4a5c;
+color:white;
+}
+
+body.dark .contact-input::placeholder{
+color:#c9d1d9;
+}
+
+body.dark .contact-description{
+color:white;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media screen and (max-width:992px){
+
+.contact-container{
+flex-direction:column;
+}
+
+.contact-form{
+grid-template-columns:1fr;
+}
+
+.phone{
+grid-column:span 1;
+}
+
+.message{
+grid-column:span 1;
+}
+
+.send-btn{
+grid-column:span 1;
+}
+
+}

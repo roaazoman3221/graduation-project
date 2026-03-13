@@ -1,60 +1,149 @@
 import './NavBar.css'
 import { IoMoon } from "react-icons/io5";
+import { MdOutlineWbSunny } from "react-icons/md";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const NavBar = () => {
-    const [active, setActive] = useState("home");
-    return (
-        <nav className="navbar">
-            <h2 className='my-name'>Roaa</h2>
 
-            <ul className="nav-links">
-                <li className='li home'>
-                    <a 
-                        href="#home"
-                        className={active === "home" ? "active" : ""}
-                        onClick={() => setActive("home")}
-                    >Home</a>
-                </li>
+const [active,setActive]=useState("home");
 
-                <li className='li about-me'>
-                    <a href="#about-me"
-                    className={active === "about-me" ? "active" : ""}
-                    onClick={() => setActive("about-me")}
-                    >About Me</a>
-                </li>
+/* حفظ الثيم في localStorage */
 
-                <li className='li education'>
-                    <a 
-                        href="#education" className={active === "education" ? "active" : ""} onClick={() => setActive("education")}
-                    >Education</a>
-                </li>
+const [darkMode,setDarkMode]=useState(
+localStorage.getItem("theme")==="dark"
+);
 
-                <li className='li projects'>
-                    <a 
-                        href="#projects" className={active === "projects" ? "active" : ""} onClick={() => setActive("projects")}
-                    >Projects</a>
-                </li>
+const [menuOpen,setMenuOpen]=useState(false);
 
-                <li className='li contact'>
-                    <a 
-                        href="#contact" className={active === "contact" ? "active" : ""} onClick={() => setActive("contact")}
-                    >Contact</a>
-                </li>
-            </ul>
+/* تطبيق الثيم عند التغيير */
 
-            <div className="icons">
-                <button className='moon'>
-                    <IoMoon className='moon-icon' />
-                </button>
+useEffect(()=>{
 
-                <button className='bars'>
-                    <FaBarsStaggered className='bars-icon'/>
-                </button>
-            </div>
-        </nav>
-    )
+if(darkMode){
+document.body.classList.add("dark");
+localStorage.setItem("theme","dark");
+}else{
+document.body.classList.remove("dark");
+localStorage.setItem("theme","light");
 }
 
-export default NavBar;
+},[darkMode])
+
+/* تغيير الثيم */
+
+const toggleTheme=()=>{
+setDarkMode(!darkMode);
+}
+
+/* التنقل بين الأقسام */
+
+const scrollToSection=(id)=>{
+
+const section=document.getElementById(id);
+
+if(section){
+section.scrollIntoView({behavior:"smooth"});
+}
+
+setActive(id);
+setMenuOpen(false);
+
+}
+
+return(
+
+<nav className="navbar">
+
+<h2 className='my-name'>Roaa</h2>
+
+<ul className="nav-links">
+
+<li>
+<a
+onClick={()=>scrollToSection("home")}
+className={active==="home"?"active":""}
+>
+Home
+</a>
+</li>
+
+<li>
+<a
+onClick={()=>scrollToSection("about-me")}
+className={active==="about-me"?"active":""}
+>
+About Me
+</a>
+</li>
+
+<li>
+<a
+onClick={()=>scrollToSection("education")}
+className={active==="education"?"active":""}
+>
+Education
+</a>
+</li>
+
+<li>
+<a
+onClick={()=>scrollToSection("projects")}
+className={active==="projects"?"active":""}
+>
+Projects
+</a>
+</li>
+
+<li>
+<a
+onClick={()=>scrollToSection("contact")}
+className={active==="contact"?"active":""}
+>
+Contact
+</a>
+</li>
+
+</ul>
+
+<div className="icons">
+
+<button className='moon' onClick={toggleTheme}>
+{darkMode
+? <MdOutlineWbSunny className='sun-icon'/>
+: <IoMoon className='moon-icon'/>
+}
+</button>
+
+<button className='bars' onClick={()=>setMenuOpen(true)}>
+<FaBarsStaggered className='bars-icon'/>
+</button>
+
+</div>
+
+{/* MOBILE MENU */}
+
+<div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+
+<button
+className="close-menu"
+onClick={()=>setMenuOpen(false)}
+>
+×
+</button>
+
+<a onClick={()=>scrollToSection("home")}>Home</a>
+<a onClick={()=>scrollToSection("about-me")}>About Me</a>
+<a onClick={()=>scrollToSection("education")}>Education</a>
+<a onClick={()=>scrollToSection("projects")}>Projects</a>
+<a onClick={()=>scrollToSection("contact")}>Contact</a>
+
+</div>
+
+</nav>
+
+)
+
+}
+
+export default NavBar

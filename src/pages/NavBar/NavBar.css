@@ -1,82 +1,205 @@
+/* ===== NAVBAR ===== */
 
 .navbar{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 70px;
-    background-color: rgba(255, 255, 255, 0.973);
+width:100%;
+position:fixed;
+top:0;
+left:0;
+z-index:999;
 
-    .my-name{
-        font-weight: 600;
-        font-style: SemiBold;
-        font-size: 24px;
-        line-height: 150%;
-    }
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-    .nav-links{
-        max-width: 100%;
-        display: flex;
-        gap: 24px;
-        list-style: none;
+padding:40px 70px;
 
-        a{
-            text-decoration: none;
-            font-weight: 500;
-            font-style: Medium;
-            font-size: 16px;
-            line-height: 150%;
-            color: #1D2130;
-            
-        }
-        
-    }
-
-.nav-links a.active{
-    color: #0C96E2;
-}
-.nav-links a:hover{
-    color: #0C96E2;
+background-color:rgba(255,255,255,0.973);
+transition:all 0.3s ease;
 }
 
-    .icons{
-        display: flex;
-        gap: 30px;
-    }
+/* ===== LOGO ===== */
 
-    .moon , .bars{
-        background: none;
-        border: none;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-
-        .moon-icon , .bars-icon{
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .bars{
-        display: none;
-    }
-
+.navbar .my-name{
+font-weight:600;
+font-size:24px;
+line-height:150%;
 }
 
+/* ===== NAV LINKS ===== */
 
-@media screen and (max-width : 992px) {
-    .navbar{
-        padding: 40px 20px;
-        .nav-links{
-            display: none;
-        }
-        .bars{
-            display: block;
-        }
-    }
-    
+.navbar .nav-links{
+max-width:100%;
+display:flex;
+gap:24px;
+list-style:none;
+cursor:pointer;
+}
+
+.navbar .nav-links a{
+text-decoration:none;
+font-weight:500;
+font-size:16px;
+line-height:150%;
+color:#1D2130;
+}
+
+.navbar .nav-links a.active{
+color:#0C96E2;
+}
+
+.navbar .nav-links a:hover{
+color:#0C96E2;
+}
+
+/* ===== ICONS ===== */
+
+.navbar .icons{
+display:flex;
+gap:30px;
+}
+
+/* ===== BUTTONS ===== */
+
+.navbar .moon,
+.navbar .bars{
+background:none;
+border:none;
+width:30px;
+height:30px;
+cursor:pointer;
+}
+
+/* ===== ICON SIZE ===== */
+
+.navbar .moon-icon,
+.navbar .bars-icon,
+.navbar .sun-icon{
+width:100%;
+height:100%;
+}
+
+/* ===== MOBILE MENU BUTTON ===== */
+
+.navbar .bars{
+display:none;
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark .navbar{
+background-color:#1b2431e2;
+color:white;
+}
+
+body.dark .navbar .nav-links a{
+color:white;
+}
+
+body.dark .navbar .nav-links a.active,
+body.dark .navbar .nav-links a:hover{
+color:#0C96E2;
+}
+
+/* أيقونة القائمة */
+
+body.dark .navbar .bars-icon{
+color:white;
+}
+
+/* أيقونة الشمس */
+
+body.dark .navbar .sun-icon{
+color:white;
+}
+
+/* ===== MOBILE MENU ===== */
+
+.mobile-menu{
+position:fixed;
+top:0;
+right:-260px;
+
+width:260px;
+height:100vh;
+
+background:white;
+
+display:flex;
+flex-direction:column;
+gap:30px;
+
+padding:100px 30px;
+
+transition:0.3s ease;
+
+z-index:1000;
+}
+
+.mobile-menu.open{
+right:0;
+}
+
+/* links */
+
+.mobile-menu a{
+text-decoration:none;
+font-size:18px;
+font-weight:500;
+color:#1D2130;
+cursor:pointer;
+}
+
+.mobile-menu a:hover{
+color:#0C96E2;
+}
+
+/* close button */
+
+.close-menu{
+position:absolute;
+top:30px;
+right:30px;
+
+font-size:28px;
+
+border:none;
+background:none;
+
+cursor:pointer;
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark .mobile-menu{
+background:#1B2431;
+}
+
+body.dark .mobile-menu a{
+color:white;
+}
+
+body.dark .mobile-menu a:hover{
+color:#0C96E2;
+}
+
+body.dark .close-menu{
+color:white;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media screen and (max-width:992px){
+
+.navbar{
+padding:40px 20px;
+}
+
+.navbar .nav-links{
+display:none;
+}
+
+.navbar .bars{
+display:block;
+}
+
 }
