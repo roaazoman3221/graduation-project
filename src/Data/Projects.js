@@ -3,7 +3,7 @@ import estateInterface from '../assets/images/real-estate-interface.png'
 import Edupress from '../assets/images/Edupress.png'
 import dashback from '../assets/images/dashback.png'
 import simpleinterfacewebsite from '../assets/images/simple-interface-website.png'
-
+import Myshop from '../assets/images/my-shop.png'
 export const projects = [
 {
 id:1,
@@ -55,6 +55,15 @@ image:simpleinterfacewebsite,
 github:"https://roaazoman3221.github.io/simple-interface-website/",
 date:"14-01-2026",
 description:"Modern interface built with React."
+},
+{
+id:6,
+title:"My shop",
+tech:"Javascript - CSS - React",
+image:Myshop,
+github:"https://roaazoman3221.github.io/my-shop/",
+date:"09-12-2025",
+description:"a test that i made once for a simple shop using react"
 }
 
 ]
